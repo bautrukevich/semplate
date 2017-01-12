@@ -21,7 +21,7 @@ t('Hello, {{ WHO }}!', { who: 'JavaScript' });
 t('Hello, {{ @who }}!', { who: 'JavaScript' });
 // "Hello, JavaScript!"
 
-// You can pass other optional arguments: remove (default: true) and debug (true) 
+// You can pass other optional arguments: remove (default: true) and debug (default: true) 
 t('Hello, {{ @who }}!', { what: 'JavaScript' }, true, false);
 // "Hello, !"
 ```
