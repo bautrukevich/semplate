@@ -1,6 +1,6 @@
 {
   "name": "webpack-lib-starter",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Tiny template pure function",
   "main": "dist/t.js",
   "scripts": {
