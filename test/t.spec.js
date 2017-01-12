@@ -1,10 +1,9 @@
 import chai from 'chai';
-import t from '../dist/t.min.js';
+import t from '../src/t';
 
 chai.expect();
 
 const expect = chai.expect;
-
 const string = 'Hello, {{who}}!';
 
 describe('Template function t(string, object)', function () {
@@ -34,6 +33,10 @@ describe('Template function t(string, object)', function () {
   });
   it('should return the correct value value when object doesn\'t have property and when have @', () => {
     expect(t('Hello, {{ @who }}!', { what: 'world' }, true, false)).to.be.equal('Hello, !');
+  });
+  it('should return the correct value value when object doesn\'t have property and remove ===' +
+    ' true', () => {
+    expect(t('Hello, {{ @who }}!', { what: 'world' }, false, false)).to.be.equal('Hello, {{ @who }}!');
   });
   it('param string shouldn\'t be changed', () => {
     t(string, { who: 'world' });

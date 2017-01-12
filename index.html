@@ -9,4 +9,7 @@
     <p>Webpack-dev-server serve this file. With autoreload</p>
 </body>
 <script src="dist/t.min.js"></script>
+<script type="text/babel">
+    console.log(t("Hello, {{ @js }}", { js: "JavaScript"}));
+</script>
 </html>
