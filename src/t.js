@@ -1,4 +1,5 @@
 /**
+ * A tiny template function
  *
  * @param string
  * @param object
