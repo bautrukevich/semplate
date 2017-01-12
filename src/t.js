@@ -1,17 +1,4 @@
 /**
- * A tiny template pure function
- *
- * @param string
- * @param object
- * @returns {string}
- * @example
- *
- * t('Hello, {{who}}!', { who: 'world' })
- * // Hello, world!
- *
- */
-
-/**
  *
  * @param string
  * @param object
