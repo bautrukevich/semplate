@@ -7,7 +7,7 @@
  * @returns {string}
  * @example
  *
- * t('Hello, {{who}}!', { who: 'world' })
+ * t('Hello, {{ @who }}!', { who: 'world' })
  * // Hello, world!
  *
  */
