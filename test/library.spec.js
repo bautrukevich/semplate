@@ -14,6 +14,9 @@ describe('Template function t(string, object)', function () {
   it('should return the correct value when string in UPPERCASE', () => {
     expect(t('Hello, {{ WHO }}!', { who: 'world' })).to.be.equal('Hello, world!');
   });
+  it('should return the correct value when have @', () => {
+    expect(t('Hello, {{ @who }}!', { who: 'world' })).to.be.equal('Hello, world!');
+  });
   it('should return the correct value when have spaces', () => {
     expect(t('Hello, {{ who }}!', { who: 'world' })).to.be.equal('Hello, world!');
   });
@@ -28,6 +31,9 @@ describe('Template function t(string, object)', function () {
   });
   it('should return the correct value when object doesn\'t have property', () => {
     expect(t('Hello, {{who}}!', { what: 'world' }, false)).to.be.equal('Hello, !');
+  });
+  it('should return the correct value value when object doesn\'t have property and when have @', () => {
+    expect(t('Hello, {{ @who }}!', { what: 'world' }, false)).to.be.equal('Hello, !');
   });
   it('param string shouldn\'t be changed', () => {
     t(string, { who: 'world' });

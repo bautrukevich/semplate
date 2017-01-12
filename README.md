@@ -15,4 +15,8 @@ t('Hello, {{ who }}!', { who: 'JavaScript' });
 
 t('Hello, {{ WHO }}!', { who: 'JavaScript' });
 // "Hello, JavaScript!"
+
+// Variable can have @ to avoid conflict with another template engines (as an example, Blade), 
+t('Hello, {{ @who }}!', { who: 'JavaScript' });
+// "Hello, JavaScript!"
 ```

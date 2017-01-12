@@ -12,10 +12,10 @@
  */
 export default function t(string, object, debug = true) {
   let result = string;
-  let regExpNotFound = new RegExp('{{\\s?\\w+\\s?}}', 'ig');
+  let regExpNotFound = new RegExp('{{\\s?@?\\w+\\s?}}', 'ig');
 
   for (let property in object) {
-    let regExp = new RegExp('{{\\s?' + property + '\\s?}}', 'ig');
+    let regExp = new RegExp('{{\\s?@?' + property + '\\s?}}', 'ig');
 
     if (regExp.test(string)) {
       result = result.replace(regExp, object[property]);
