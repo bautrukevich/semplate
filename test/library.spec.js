@@ -30,10 +30,10 @@ describe('Template function t(string, object)', function () {
     expect(t('Hello, {{who}}!', {})).to.be.equal('Hello, !');
   });
   it('should return the correct value when object doesn\'t have property', () => {
-    expect(t('Hello, {{who}}!', { what: 'world' }, false)).to.be.equal('Hello, !');
+    expect(t('Hello, {{who}}!', { what: 'world' }, true, false)).to.be.equal('Hello, !');
   });
   it('should return the correct value value when object doesn\'t have property and when have @', () => {
-    expect(t('Hello, {{ @who }}!', { what: 'world' }, false)).to.be.equal('Hello, !');
+    expect(t('Hello, {{ @who }}!', { what: 'world' }, true, false)).to.be.equal('Hello, !');
   });
   it('param string shouldn\'t be changed', () => {
     t(string, { who: 'world' });

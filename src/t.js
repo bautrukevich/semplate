@@ -2,6 +2,7 @@
  *
  * @param string
  * @param object
+ * @param remove (optional)
  * @param debug (optional)
  * @returns {string}
  * @example
@@ -10,7 +11,7 @@
  * // Hello, world!
  *
  */
-export default function t(string, object, debug = true) {
+export default function t(string, object, remove = true, debug = true) {
   let result = string;
   let regExpNotFound = new RegExp('{{\\s?@?\\w+\\s?}}', 'ig');
 
@@ -26,6 +27,9 @@ export default function t(string, object, debug = true) {
     }
   }
 
-  result = result.replace(regExpNotFound, '');
+  if (remove) {
+    result = result.replace(regExpNotFound, '');
+  }
+
   return result;
 }
