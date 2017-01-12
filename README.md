@@ -4,7 +4,7 @@ Tiny template pure function
 
 ## Usage
 
-```
+```js
 import t from 't';
 
 t('Hello, {{who}}!', { who: 'JavaScript' });
