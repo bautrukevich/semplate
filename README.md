@@ -22,6 +22,15 @@ t('Hello, {{ @who }}!', { who: 'JavaScript' });
 // "Hello, JavaScript!"
 
 // You can pass other optional arguments: remove (default: true) and debug (default: true) 
+t('Hello, {{ @who }}!', { what: 'JavaScript' }, true, true);
+// "what" property was not found in string.
+// "Hello, !"
+
+// You can pass other optional arguments: remove (default: true) and debug (default: true) 
 t('Hello, {{ @who }}!', { what: 'JavaScript' }, true, false);
 // "Hello, !"
+
+// You can pass other optional arguments: remove (default: true) and debug (default: true) 
+t('Hello, {{ @who }}!', { what: 'JavaScript' }, false, false);
+// "Hello, {{ @who }}!"
 ```
