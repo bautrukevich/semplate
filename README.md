@@ -7,6 +7,12 @@ Tiny template pure function
 ```js
 import t from 't';
 
-t("Hello, {{who}}!", { who: "JavaScript" });
+t('Hello, {{who}}!', { who: 'JavaScript' });
+// "Hello, JavaScript!"
+
+t('Hello, {{ who }}!', { who: 'JavaScript' });
+// "Hello, JavaScript!"
+
+t('Hello, {{ WHO }}!', { who: 'JavaScript' });
 // "Hello, JavaScript!"
 ```
