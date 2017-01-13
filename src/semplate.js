@@ -8,11 +8,11 @@
  * @returns {string}
  * @example
  *
- * t('Hello, {{ @who }}!', { who: 'world' })
+ * semplate('Hello, {{ @who }}!', { who: 'world' })
  * // Hello, world!
  *
  */
-export default function t(string, object, remove = true, debug = true) {
+export default function semplate(string, object, remove = true, debug = true) {
   let result = string;
   let regExpNotFound = new RegExp('{{\\s?@?\\w+\\s?}}', 'ig');
 
@@ -33,4 +33,4 @@ export default function t(string, object, remove = true, debug = true) {
   }
 
   return result;
-}
+};

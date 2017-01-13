@@ -1,3 +1,3 @@
-import t from './t';
+import semplate from './semplate';
 
-export default t;
+export default semplate;

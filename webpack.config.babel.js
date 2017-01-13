@@ -4,7 +4,7 @@ import yargs from 'yargs';
 
 let env = yargs.argv.env;
 
-let libraryName = 't';
+let libraryName = 'semplate';
 let plugins = [], outputFile;
 
 if (env === 'build') {

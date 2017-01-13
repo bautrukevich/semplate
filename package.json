@@ -2,7 +2,7 @@
   "name": "semplate",
   "version": "0.2.3",
   "description": "Tiny template pure function",
-  "main": "dist/t.js",
+  "main": "dist/semplate.min.js",
   "scripts": {
     "build": "webpack -p --env=build",
     "dev": "webpack-dev-server --hot --open",
@@ -10,7 +10,7 @@
     "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
   },
   "repository": {
-    "url": "https://github.com/bautrukevich/t.js.git",
+    "url": "https://github.com/bautrukevich/semplate.git",
     "type": "git"
   },
   "author": "Siarhei Bautrukevich",
