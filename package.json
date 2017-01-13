@@ -1,6 +1,6 @@
 {
   "name": "semplate",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Tiny template pure function",
   "main": "dist/t.js",
   "scripts": {
