@@ -1,6 +1,6 @@
 {
   "name": "semplate",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Tiny template pure function",
   "main": "dist/semplate.min.js",
   "scripts": {
