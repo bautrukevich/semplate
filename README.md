@@ -1,46 +1,57 @@
-# semplate (simple template || string template)
+# Semplate
 
-A tiny template pure function
+Tiny template library.
 
-## Installation
+[![NPM version][npm-img]][npm-url]
+[![GitHub release][badge-release-img]][badge-release-url]&nbsp;
 
-You can use this function simply add `dist/semplate.min.js` file on the page.
+<!-- toc -->
 
-Or you can install as npm module
+* [Install](#install)
+* [Usage](#usage)
+* [Feedback](#feedback)
+* [License](#license)
 
-```
-yarn add semplate
+<!-- tocstop -->
+
+## Install
+
+```bash
+npm install semplate --save
 ```
 
 ## Usage
 
-```js
-import semplate from 'semplate';
+```javascript
+import semplate from 'semplate'
 
-semplate('Hello, {{who}}!', { who: 'JavaScript' });
+semplate('Hello, {{who}}!', { who: 'JavaScript' })
 // "Hello, JavaScript!"
 
-semplate('Hello, {{ who }}!', { who: 'JavaScript' });
+semplate('Hello, {{ who }}!', { who: 'JavaScript' })
 // "Hello, JavaScript!"
 
-semplate('Hello, {{ WHO }}!', { who: 'JavaScript' });
+semplate('Hello, {{ WHO }}!', { who: 'JavaScript' })
 // "Hello, JavaScript!"
 
 // Variable can have @ to avoid conflict with another template engines (as an example, Blade). 
 // More prefer to use function like this:
-semplate('Hello, {{ @who }}!', { who: 'JavaScript' });
+semplate('Hello, {{ @who }}!', { who: 'JavaScript' })
 // "Hello, JavaScript!"
-
-// You can pass other optional arguments: remove (default: true) and debug (default: true) 
-semplate('Hello, {{ @who }}!', { what: 'JavaScript' }, true, true);
-// "what" property was not found in string.
-// "Hello, !"
-
-// You can pass other optional arguments: remove (default: true) and debug (default: true) 
-semplate('Hello, {{ @who }}!', { what: 'JavaScript' }, true, false);
-// "Hello, !"
-
-// You can pass other optional arguments: remove (default: true) and debug (default: true) 
-semplate('Hello, {{ @who }}!', { what: 'JavaScript' }, false, false);
-// "Hello, {{ @who }}!"
 ```
+
+## Feedback
+
+Issues and PRs are welcome. You can provide your feedback or drop me a support
+request at [hello@bautrukevich.com][email-hello].
+
+[email-hello]: mailto:hello@bautrukevich.com
+[github-releases]: https://github.com/bautrukevich/semplate/releases
+[github-contributors]: https://github.com/bautrukevich/semplate/graphs/contributors
+[badge-release-img]: https://img.shields.io/github/release/bautrukevich/semplate.svg
+[badge-release-url]: https://github.com/bautrukevich/semplate/releases
+[npm-img]: http://img.shields.io/npm/v/semplate.svg
+[npm-url]: https://www.npmjs.org/package/semplate
+
+## License
+[MIT](./LICENSE)

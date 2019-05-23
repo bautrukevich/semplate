@@ -1,0 +1,3 @@
+# This list of authors is based on the git history of this repo.
+
+Siarhei Bautrukevich <hello@bautrukevich.com>
