@@ -1,44 +1,35 @@
 {
   "name": "semplate",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Tiny template pure function",
-  "main": "dist/semplate.min.js",
-  "scripts": {
-    "build": "webpack -p --env=build",
-    "dev": "webpack-dev-server --hot --open",
-    "test": "mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js"
-  },
+  "main": "dist/semplate.cjs.js",
+  "module": "dist/semplate.esm.js",
+  "browser": "dist/semplate.umd.js",
   "repository": {
     "url": "https://github.com/bautrukevich/semplate.git",
     "type": "git"
   },
   "author": "Siarhei Bautrukevich",
   "license": "MIT",
-  "keywords": [
-    "webpack",
-    "es6",
-    "starter",
-    "library",
-    "universal",
-    "umd",
-    "commonjs"
-  ],
   "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-core": "^6.21.0",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.10",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-latest": "^6.16.0",
-    "babel-register": "^6.18.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.13.1",
-    "eslint-loader": "^1.6.1",
-    "mocha": "^3.2.0",
-    "webpack": "beta",
-    "webpack-dev-server": "^1.16.2",
-    "yargs": "^6.6.0"
+    "@types/jest": "^24.0.13",
+    "jest": "^24.8.0",
+    "rollup": "^1.12.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "tslib": "^1.9.3",
+    "typescript": "^3.4.5"
   },
-  "dependencies": {}
+  "scripts": {
+    "prebuild": "npm run test",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest"
+  },
+  "files": [
+    "dist"
+  ]
 }
